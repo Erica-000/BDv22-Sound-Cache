@@ -1,0 +1,4 @@
+gameinfo
+{
+	AddEventHandlers = "BD_Sound_Cache"
+}
