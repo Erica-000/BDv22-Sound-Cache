@@ -1,4 +1,4 @@
-class BD_Sound_Cache : EventHandler
+class BD_Sound_Cache : StaticEventHandler
 {
     override void WorldLoaded(worldEvent e)
     {
