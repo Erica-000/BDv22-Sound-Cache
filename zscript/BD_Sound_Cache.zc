@@ -1,843 +1,293 @@
 class BD_Sound_Cache : StaticEventHandler
 {
-    override void WorldLoaded(worldEvent e)
-    {
-        //
-        // ------------------------------- SNDINFO.Gore ------------------------------- 
-        //
-        // Gore Decorations
-        S_StartSound("CPTRT01", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CPTRT02", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CPTRT03", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CPTRT04", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CPTRT05", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CPTRT06", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CPTRT07", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CPTRT08", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CPTRT09", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CPTRT10", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CPTRT11", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CPTRT12", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CPTRT13", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CPTRT14", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CPTRP1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CPTRP2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CPTRP3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("FLEAS", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BTHUD1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BTHUD2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BTHUD3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BTHUD4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BTHUD5", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BTHUD6", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BTHUD7", CHAN_AUTO, volume: 0.01);
-
-        // Generic Gore
-        S_StartSound("misc/xdeath1a", CHAN_AUTO, volume: 0.01);
-        S_StartSound("misc/xdeath1b", CHAN_AUTO, volume: 0.01);
-        S_StartSound("misc/xdeath1c", CHAN_AUTO, volume: 0.01);
-        S_StartSound("misc/xdeath1d", CHAN_AUTO, volume: 0.01);
-        S_StartSound("misc/xdeath1e", CHAN_AUTO, volume: 0.01);
-        S_StartSound("misc/xdeath1f", CHAN_AUTO, volume: 0.01);
-        S_StartSound("misc/xdeath2a", CHAN_AUTO, volume: 0.01);
-        S_StartSound("misc/xdeath2b", CHAN_AUTO, volume: 0.01);
-        S_StartSound("misc/xdeath2c", CHAN_AUTO, volume: 0.01);
-        S_StartSound("misc/xdeath2d", CHAN_AUTO, volume: 0.01);
-        S_StartSound("misc/xdeath2e", CHAN_AUTO, volume: 0.01);
-        S_StartSound("misc/xdeath2f", CHAN_AUTO, volume: 0.01);
-        S_StartSound("misc/xdeath3a", CHAN_AUTO, volume: 0.01);
-        S_StartSound("misc/xdeath3b", CHAN_AUTO, volume: 0.01);
-        S_StartSound("misc/xdeath3c", CHAN_AUTO, volume: 0.01);
-        S_StartSound("misc/xdeath4a", CHAN_AUTO, volume: 0.01);
-        S_StartSound("misc/xdeath4b", CHAN_AUTO, volume: 0.01);
-        S_StartSound("misc/xdeath4c", CHAN_AUTO, volume: 0.01);
-
-        S_StartSound("BONECR1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BONECR2", CHAN_AUTO, volume: 0.01);
-
-        S_StartSound("LQDRIP1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("LQDRIP2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("LQDRIP3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("LQDRIP4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("LQDRIP5", CHAN_AUTO, volume: 0.01);
-        S_StartSound("LQDRIP6", CHAN_AUTO, volume: 0.01);
-        S_StartSound("LQDRIP7", CHAN_AUTO, volume: 0.01);
-        S_StartSound("LQDRIP8", CHAN_AUTO, volume: 0.01);
-        S_StartSound("LQDRIP9", CHAN_AUTO, volume: 0.01);
-        S_StartSound("LQDRIP10", CHAN_AUTO, volume: 0.01);
-        S_StartSound("LQDRIP11", CHAN_AUTO, volume: 0.01);
-        S_StartSound("LQDRIP12", CHAN_AUTO, volume: 0.01);
-        S_StartSound("LQDRIP13", CHAN_AUTO, volume: 0.01);
-        S_StartSound("LQDRIP14", CHAN_AUTO, volume: 0.01);
-
-        S_StartSound("DSBLUD01", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DSBLUD02", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DSBLUD03", CHAN_AUTO, volume: 0.01);
-
-        S_StartSound("HEDBON1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("HEDBON2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("HEDBON3", CHAN_AUTO, volume: 0.01);
-
-        S_StartSound("heartbeat1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("heartbeat2", CHAN_AUTO, volume: 0.01);
-
-        //
-        // ------------------------------- SNDINFO.Terrain ------------------------------- 
-        //
-        // Terrain
-        S_StartSound("slime", CHAN_AUTO, volume: 0.01);
-        S_StartSound("slimesmall", CHAN_AUTO, volume: 0.01);
-        S_StartSound("watersmall", CHAN_AUTO, volume: 0.01);
-        S_StartSound("burn", CHAN_AUTO, volume: 0.01);
-        S_StartSound("burnsmall", CHAN_AUTO, volume: 0.01);
-        S_StartSound("blood1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("blood2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("bloodsmall1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("bloodsmall2", CHAN_AUTO, volume: 0.01);
-
-        // Ambient Objects
-        S_StartSound("Sparks/Sound1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Sparks/Sound2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Sparks/Sound3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Sparks/Sound4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DSBOTTLE", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CHNRTL1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CHNRTL2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CHNRTL3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BDFirePlace", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BDFirePlace2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BDALARM", CHAN_AUTO, volume: 0.01);
-        S_StartSound("WINBREA", CHAN_AUTO, volume: 0.01);
-
-        // Ambient Sounds
-        S_StartSound("AMBRAIN", CHAN_AUTO, volume: 0.01);
-        S_StartSound("AMBAIRP", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ICEBRK1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ICEBRK2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BDWFALL1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BDWFALL2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BDWFALL3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ACIDMELT", CHAN_AUTO, volume: 0.01);
-
-        // Splish Splash
-        S_StartSound("bigspl1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("dssplas2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("water1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("water2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("water3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("water4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("world/watersplashsmall", CHAN_AUTO, volume: 0.01);
-        S_StartSound("world/sludgegloop", CHAN_AUTO, volume: 0.01);
-        S_StartSound("world/sludgegloopsmall", CHAN_AUTO, volume: 0.01);
-        S_StartSound("world/lavasizzle", CHAN_AUTO, volume: 0.01);
-        S_StartSound("world/lavsiz2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("world/lavasizzlesmall", CHAN_AUTO, volume: 0.01);
-        S_StartSound("world/drip", CHAN_AUTO, volume: 0.01);
-        S_StartSound("world/hotsiz", CHAN_AUTO, volume: 0.01);
-
-        //
-        // ------------------------------- SNDINFO.Monsters ------------------------------- 
-        //
-        // Footsteps
-        S_StartSound("fatso/active", CHAN_AUTO, volume: 0.01);
-        S_StartSound("pain/active", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ZomStep1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ZomStep2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ZomStep3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ZomStep4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ImpStep1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ImpStep2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ImpStep3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ImpStep4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("FatStep1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("FatStep2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("FatStep3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("FatStep4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("PinkySt1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("PinkySt2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("PinkySt3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("PinkySt4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("RevStep1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("RevStep2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("RevStep3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("RevStep4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BruStep1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BruStep2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BruStep3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BruStep4", CHAN_AUTO, volume: 0.01);
-        
-        // Normal Monsters
-        // Zombieman + Shotgunguy + Chaingunguy
-        S_StartSound("DSPOPAI1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DSPOPAI2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DSPOPAI3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DSPOPAI4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ZCSIT1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ZCSIT2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ZCSIT3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ZCSIT4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ZCSIT5", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BURNZOM1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BURNZOM2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BURNZOM3", CHAN_AUTO, volume: 0.01);
-
-        // Imp
-        S_StartSound("IMPCHARG", CHAN_AUTO, volume: 0.01);
-        S_StartSound("imp/melee1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("imp/melee2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("imp/melee3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("IMPMISS1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("IMPMISS2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("IMPMISS3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ImpStep1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ImpStep2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ImpStep3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ImpStep4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ImpBall4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ImpBall5", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ImpBall6", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ImpBall1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ImpBall2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ImpBall3", CHAN_AUTO, volume: 0.01);
-
-        // Pinky Demon
-        S_StartSound("PINKIDL1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("PINKIDL2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("PINKIDL3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("PINKIDL4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DSBIGDPN", CHAN_AUTO, volume: 0.01);
-
-        // Cacodemon
-        S_StartSound("caco/pain", CHAN_AUTO, volume: 0.01);
-        S_StartSound("caco/active", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CacoBal4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CacoBal5", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CacoBal6", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CacoBal1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CacoBal2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CacoBal3", CHAN_AUTO, volume: 0.01);
-
-        // Lost Soul
-        S_StartSound("skull/pain", CHAN_AUTO, volume: 0.01);
-        S_StartSound("skull/active", CHAN_AUTO, volume: 0.01);
-        S_StartSound("LSOD1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("LSOD2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("LSOD3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("LSOD4", CHAN_AUTO, volume: 0.01);
-
-        // Baron of Hell + Hell Knight
-        S_StartSound("baron/active", CHAN_AUTO, volume: 0.01);
-        S_StartSound("knight/active", CHAN_AUTO, volume: 0.01);
-        S_StartSound("PSXDPN", CHAN_AUTO, volume: 0.01);
-        S_StartSound("bigstep1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("bigstep2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("bigstep3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("bigstep4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BaroBal4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BaroBal5", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BaroBal6", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BaroBal1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BaroBal2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BaroBal3", CHAN_AUTO, volume: 0.01);
-
-        // Revenant
-        S_StartSound("REVIDLE1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("REVIDLE2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("REVIDLE3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("REVIDLE4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("REVIDLE5", CHAN_AUTO, volume: 0.01);
-        S_StartSound("REVIDLE6", CHAN_AUTO, volume: 0.01);
-        S_StartSound("REVIDLE7", CHAN_AUTO, volume: 0.01);
-        S_StartSound("REVOUCH1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("REVOUCH2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("REVOUCH3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Skeleton/explode", CHAN_AUTO, volume: 0.01);
-
-        // Arachnotron
-        S_StartSound("SPIPAIN1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("SPIPAIN2", CHAN_AUTO, volume: 0.01);
-
-        // Cyberdemon
-        S_StartSound("CLAP", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CYBPAIN", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CYBTAT", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DSCANFIR", CHAN_AUTO, volume: 0.01);
-        S_StartSound("cyber/active", CHAN_AUTO, volume: 0.01);
-
-        // Mastermind
-        S_StartSound("Mastermind/minigun", CHAN_AUTO, volume: 0.01);
-
-        // Custom Monsters
-        // Icon of Sin
-        S_StartSound("ICOSCRE", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ICOBREAT", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ICOTHUND", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ICOFIRE", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ICOLAUG", CHAN_AUTO, volume: 0.01);
-
-        // Volcabus
-        S_StartSound("Volcabus/Sight", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Volcabus/Pain", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Volcabus/Death", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Volcabus/Attack", CHAN_AUTO, volume: 0.01);
-        S_StartSound("VOLCCF1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("VOLCCF2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("VOLCCF3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("VOLCCF4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("VOLCBRN", CHAN_AUTO, volume: 0.01);
-
-        // Arachnotron 2 gun
-        S_StartSound("PAILGF3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("PAILGF2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("PAILGD3", CHAN_AUTO, volume: 0.01);
-
-        // Mummy
-        S_StartSound("MUMYACT", CHAN_AUTO, volume: 0.01);
-        S_StartSound("MUMYSEE", CHAN_AUTO, volume: 0.01);
-        S_StartSound("MUMYDIE", CHAN_AUTO, volume: 0.01);
-
-        // Mother Demon
-        S_StartSound("mother/sight", CHAN_AUTO, volume: 0.01);
-        S_StartSound("mother/pain", CHAN_AUTO, volume: 0.01);
-        S_StartSound("mother/death", CHAN_AUTO, volume: 0.01);
-        S_StartSound("mother/attack", CHAN_AUTO, volume: 0.01);
-        S_StartSound("mother/active", CHAN_AUTO, volume: 0.01);
-
-        // Rat?
-        S_StartSound("rat/melee", CHAN_AUTO, volume: 0.01);
-        S_StartSound("rat/pain", CHAN_AUTO, volume: 0.01);
-        S_StartSound("rat/death1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("rat/death2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("rat/death3", CHAN_AUTO, volume: 0.01);
-
-        // Zombie Marine
-        S_StartSound("zombiemarine/sight1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/sight2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/sight3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/sight4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/sight5", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/sight6", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/sight7", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/sight8", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/sight9", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/sight10", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/sight11", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/death1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/death2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/death3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/death4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/death5", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/death6", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/death7", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/pain1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/pain2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/pain3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/pain4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/pain5", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/pain6", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/pain7", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/pain8", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/pain9", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/pain10", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/pain11", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/active1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/active2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/active3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/active4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("zombiemarine/active5", CHAN_AUTO, volume: 0.01);
-
-        // Juggernaut
-        S_StartSound("juggernaut/see", CHAN_AUTO, volume: 0.01);
-        S_StartSound("juggernaut/roam", CHAN_AUTO, volume: 0.01);
-        S_StartSound("juggernaut/engine", CHAN_AUTO, volume: 0.01);
-        S_StartSound("juggernaut/death", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BTKPAIN1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BTKPAIN2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BTKPAIN3", CHAN_AUTO, volume: 0.01);
-
-        // Nazi
-        S_StartSound("nazisight1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazisight2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazisight3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazisight4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazisight5", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazisight5", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazisight6", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazisight7", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazisight8", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazideath1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazideath2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazideath3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazideath4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazideath5", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazideath6", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazideath7", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazideath8", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazideath9", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazideath10", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazideath11", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazipain1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazipain2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazipain3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazipain4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazipain5", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazipain6", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazipain7", CHAN_AUTO, volume: 0.01);
-        S_StartSound("nazipain8", CHAN_AUTO, volume: 0.01);
-
-        // Evil Marines
-        S_StartSound("EVMRSIT1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("EVMRSIT2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("EVMRSIT3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("EVMRSIT4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("EVMRSIT5", CHAN_AUTO, volume: 0.01);
-        S_StartSound("EVMRSIT6", CHAN_AUTO, volume: 0.01);
-        S_StartSound("EVMRACT1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("EVMRACT2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("EVMRACT3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("EVMRACT4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("EVMRPN1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("EVMRPN2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("EVMRDT1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("EVMRDT2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("EVMRLAUG", CHAN_AUTO, volume: 0.01);
-
-        // WAD Compatibility Monsters
-        // Ancient ALiens
-        S_StartSound("alieno/pain", CHAN_AUTO, volume: 0.01);
-        S_StartSound("alieno/death", CHAN_AUTO, volume: 0.01);
-        S_StartSound("alieno/sight", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Alieno/Attivo", CHAN_AUTO, volume: 0.01);
-        S_StartSound("AlienGuard/See", CHAN_AUTO, volume: 0.01);
-        S_StartSound("AlienGuardian/Loop", CHAN_AUTO, volume: 0.01);
-        S_StartSound("AlienGuard/Death", CHAN_AUTO, volume: 0.01);
-
-        // Wolfenstein Nazis
-        S_StartSound("SS/pain", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BWZIDTH1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BWZIDTH2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BWZISIT1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BWZISIT2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ssscr1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ssscre2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ssscre3", CHAN_AUTO, volume: 0.01);
-
-        // Eviternity
-        S_StartSound("NDemon/sight", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Ndemon/pain", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Ndemon/death", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Ndemon/Active", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Ndemon/Attack", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BRobot/sight", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BRobot/death", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CacoAssholeSee", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CacoAssholepain", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CacoAssholedeath", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CacoAssholeAttack", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Scheletro/Morte", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Angel/sight", CHAN_AUTO, volume: 0.01);
-        S_StartSound("angel/pain", CHAN_AUTO, volume: 0.01);
-        S_StartSound("angel/cube", CHAN_AUTO, volume: 0.01);
-        S_StartSound("angel/death", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Angel/attack", CHAN_AUTO, volume: 0.01);
-        S_StartSound("FCAL1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("FCAL2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("FCAL3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("FCAL4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Commander/Idle", CHAN_AUTO, volume: 0.01);
-
-        // 2048 Unleashed
-        S_StartSound("Heart/Pain", CHAN_AUTO, volume: 0.01);
-        S_StartSound("AlphaSoul/Sight", CHAN_AUTO, volume: 0.01);
-        S_StartSound("AlphaSoul/Pain", CHAN_AUTO, volume: 0.01);
-        S_StartSound("AlphaSoul/Death", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Witch/Sight", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Witch/Spit", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Witch/Pain", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Witch/Death", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Witch/Cubeboom", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DopeFish/Pain", CHAN_AUTO, volume: 0.01);
-
-        // Eviternity
-        // Archangelus
-        S_StartSound("Archangel/sight", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Archangel/pain", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Archangel/death", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Archangel/spit", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Archangel/cube", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Archangel/cubeboom", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Bat/Sight", CHAN_AUTO, volume: 0.01);
-
-        //
-        // ------------------------------- SNDINFO.BD ------------------------------- 
-        //
-        // Misc (idk where to put them too)
-        S_StartSound("misc/keytry", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DSTELEPT", CHAN_AUTO, volume: 0.01);
-        S_StartSound("weapons/barrelpain", CHAN_AUTO, volume: 0.01);
-        S_StartSound("misc/k_pkup", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Pickup/HeavyArmor", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Pickup/RadSuit", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Pickup/Invis", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CrushSkull", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ads/in", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ads/out", CHAN_AUTO, volume: 0.01);
-        S_StartSound("weapons/lowammo", CHAN_AUTO, volume: 0.01);
-        S_StartSound("RevLaunch/Draw", CHAN_AUTO, volume: 0.01);
-
-        // Slot 1
-        // Chainsaw
-        S_StartSound("Chainsaw/Zip", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Chainsaw/Draw", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Chainsaw/Start", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Chainsaw/Loop", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Chainsaw/Stop", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Chainsaw/Idle", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Chainsaw/Cut", CHAN_AUTO, volume: 0.01);
-
-        S_StartSound("DSSAWAL1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DSSAWAL2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DSSAWAL3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DSSAWAL4", CHAN_AUTO, volume: 0.01);
-
-        S_StartSound("DSSAW1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DSSAW2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DSSAW3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DSSAW4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DSSAW5", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DSSAW6", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DSSAW7", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DSSAW8", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DSSAW9", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DSSAW0", CHAN_AUTO, volume: 0.01);
-
-        // Axe
-        S_StartSound("Axe/Wall", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Axe/Hit", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Axe/Draw", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Axe/Woosh1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Axe/Woosh2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Axe/Swing", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Axe/AltSwing", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Axe/Throw", CHAN_AUTO, volume: 0.01);
-
-        // Slot 2
-        // Pistol
-        S_StartSound("Pistol/Reload1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Pistol/Reload2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Pistol/Draw", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Pistol/slide", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Pistol/slide2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Pistol/Fire", CHAN_AUTO, volume: 0.01);
-        S_StartSound("DSPISTOL", CHAN_AUTO, volume: 0.01);
-
-        // SMG
-        S_StartSound("SMG/Fire", CHAN_AUTO, volume: 0.01);
-        S_StartSound("SMG/Reload1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("SMG/Reload2", CHAN_AUTO, volume: 0.01);
-
-        // Revolver
-        S_StartSound("Revolver/Fire", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Revolver/Fire2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Revolver/Hammer", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Revolver/Open", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Revolver/Close", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Revolver/Unload", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Revolver/Reload1", CHAN_AUTO, volume: 0.01);
-
-        // MP40
-        S_StartSound("MP40/Reload1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("MP40/Reload2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("MP40/Fire", CHAN_AUTO, volume: 0.01);
-        S_StartSound("MP40/Draw", CHAN_AUTO, volume: 0.01);
-        S_StartSound("MP40/Bolt1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("MP40/Bolt2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("MG42/Draw", CHAN_AUTO, volume: 0.01);
-
-        // Slot 3
-        // Shotgun
-        S_StartSound("Shotgun/Fire", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Shotgun/Pump", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Shotgun/Pump1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Shotgun/Pump2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("SHTLOAD1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("SHTLOAD2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("SHTLOAD3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("SHTLOAD4", CHAN_AUTO, volume: 0.01);
-        
-        // Super Shotgun
-        S_StartSound("SSG/Draw", CHAN_AUTO, volume: 0.01);
-        S_StartSound("SSG/Fire", CHAN_AUTO, volume: 0.01);
-        S_StartSound("SSG/AltFire", CHAN_AUTO, volume: 0.01);
-        S_StartSound("SSG/Lever1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("SSG/Lever2", CHAN_AUTO, volume: 0.01);
-
-        // Assault Shotgun
-        S_StartSound("ASG/Fire", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ASG/Draw", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ASG/Reload1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("ASG/Reload2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("asg/bolt1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("asg/bolt2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("asg/bolt3", CHAN_AUTO, volume: 0.01);
-
-        // Slot 4
-        // Rifle
-        S_StartSound("Rifle/Fire", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Rifle/Select", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Rifle/Bolt1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Rifle/Bolt2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Rifle/Reload1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Rifle/Reload2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Rifle/ReloadGrenade", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Rifle/Grenade1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Rifle/Grenade2", CHAN_AUTO, volume: 0.01);
-
-        // Chaingun
-        S_StartSound("Chaingun/Start", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Chaingun/Spin", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Chaingun/Stop", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Chaingun/Fire", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Chaingun/belt", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Chaingun/beltQuiet", CHAN_AUTO, volume: 0.01);
-
-        // Sniper Rifle
-        S_StartSound("Sniper/Fire", CHAN_AUTO, volume: 0.01);
-        S_StartSound("FARM14", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Sniper/Reload1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Sniper/Reload2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Sniper/Draw", CHAN_AUTO, volume: 0.01);
-
-        // Slot 5
-        // Rocket Launcher
-        S_StartSound("Rocket/Fire", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Rocket/Draw", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Rocket/Fly", CHAN_AUTO, volume: 0.01);
-        S_StartSound("rocket/reload1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("rocket/reload2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Rocket/Loop", CHAN_AUTO, volume: 0.01);
-
-        // Grenade Launcher
-        S_StartSound("Weapons/GrenadeFire", CHAN_AUTO, volume: 0.01);
-        S_StartSound("GrenadeLauncher/Fire", CHAN_AUTO, volume: 0.01);
-        S_StartSound("GLGRBNC1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("GLGRBNC2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("GLGRBNC3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("GrenadeLauncher/Open", CHAN_AUTO, volume: 0.01);
-        S_StartSound("GrenadeLauncher/Load", CHAN_AUTO, volume: 0.01);
-        S_StartSound("GrenadeLauncher/Close", CHAN_AUTO, volume: 0.01);
-        S_StartSound("HGRENB1A", CHAN_AUTO, volume: 0.01);
-        S_StartSound("HGRENB2A", CHAN_AUTO, volume: 0.01);
-
-        // Devastator
-        S_StartSound("Devastator/fire", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Devastator/select", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Devastator/explode", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Incendiary/Fire", CHAN_AUTO, volume: 0.01);
-
-        // Slot 6
-        // Plasma Rifle
-        S_StartSound("Plasma/Charge", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Plasma/AltFire", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Plasma/FullyCharged", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Plasma/Draw", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Plasma/Cool", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Plasma/Fire", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Plasma/Reload1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Plasma/Reload2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Plasma/BeepLow", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Plasma/BeepQuiet", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Plasma/Pickup", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Plasma/Beep", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Plasma/BeepBeep", CHAN_AUTO, volume: 0.01);
-        S_StartSound("PLASHIT1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("PLASHIT2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("PLASHIT3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("PLASHIT4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("PLASHIT5", CHAN_AUTO, volume: 0.01);
-
-        // Railgun
-        S_StartSound("Railgun/Fire", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Railgun/Recharge", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Railgun/Reload1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Railgun/Reload2", CHAN_AUTO, volume: 0.01);
-
-        // Slot 7
-        // BFG 9k
-        S_StartSound("BFG/Draw", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BFG/Charge", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BFG/Fire", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BFG/Explosion", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BFG/ExplosionDistant", CHAN_AUTO, volume: 0.01);
-
-        // BFG 10k
-        S_StartSound("BFG10K/Idle", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BFG10K/Charge", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BFG10K/Fire", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BFG10K/Stop", CHAN_AUTO, volume: 0.01);
-
-        // Unmaker
-        S_StartSound("Unmaker/Start", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Unmaker/Loop", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Unmaker/Stop", CHAN_AUTO, volume: 0.01);
-
-        // Misc
-        S_StartSound("SLOWON", CHAN_AUTO, volume: 0.01);
-        S_StartSound("SLOWOFF", CHAN_AUTO, volume: 0.01);
-        S_StartSound("FLASHON", CHAN_AUTO, volume: 0.01);
-        S_StartSound("FLASHOFF", CHAN_AUTO, volume: 0.01);
-        S_StartSound("INFRARED", CHAN_AUTO, volume: 0.01);
-
-        // Flamethrower
-        S_StartSound("FLAMER", CHAN_AUTO, volume: 0.01);
-        S_StartSound("FLAMSTOP", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BREATHOF", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Flamer/Select", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Flamer/idle", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Flamer/loop", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Flamer/stop", CHAN_AUTO, volume: 0.01);
-
-        S_StartSound("BRKCLANG", CHAN_AUTO, volume: 0.01);
-        S_StartSound("B2KCLANG", CHAN_AUTO, volume: 0.01);
-
-        // Grenades
-        S_StartSound("Grenade/Pin", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Grenade/Bounce", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Grenade/Toss", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Grenade/Pickup", CHAN_AUTO, volume: 0.01);
-
-        // Nuke
-        S_StartSound("Nuke/Explosion", CHAN_AUTO, volume: 0.01);
-
-        // Generic Sounds
-        S_StartSound("Weapon/Empty", CHAN_AUTO, volume: 0.01);
-        S_StartSound("RELOAD", CHAN_AUTO, volume: 0.01);
-        S_StartSound("RELO1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("RELO2", CHAN_AUTO, volume: 0.01);
-
-        // Distant Sounds
-        // Rifle
-        S_StartSound("FARRIF", CHAN_AUTO, volume: 0.01);
-
-        // Heavy Machinegun
-        S_StartSound("FARHMG", CHAN_AUTO, volume: 0.01);
-
-        // Pistol or Shotgun
-        S_StartSound("FARSHT", CHAN_AUTO, volume: 0.01);
-
-        // Light Machinegun
-        S_StartSound("FARMGN", CHAN_AUTO, volume: 0.01);
-
-        // Autocannon
-        S_StartSound("FARCAN1", CHAN_AUTO, volume: 0.01);
-
-        // SuperShotgun or Sniper Rifle
-        S_StartSound("FARSSG", CHAN_AUTO, volume: 0.01);
-
-        // Heavy Artillery
-        S_StartSound("MINIGN1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("MINIGN3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("MINIGN4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("HMGFIRE", CHAN_AUTO, volume: 0.01);
-
-        // Items
-        // Heals
-        S_StartSound("ARMOR", CHAN_AUTO, volume: 0.01);
-        S_StartSound("GOTHPB", CHAN_AUTO, volume: 0.01);
-        S_StartSound("GOTHPS", CHAN_AUTO, volume: 0.01);
-
-        // Ammo
-        S_StartSound("CBOXPKUP", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CHGNPKUP", CHAN_AUTO, volume: 0.01);
-        S_StartSound("SHELPKUP", CHAN_AUTO, volume: 0.01);
-        S_StartSound("SHELPK1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("SHELPK2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("RCKCLIP", CHAN_AUTO, volume: 0.01);
-        S_StartSound("RCKCLIP2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CBOXPICK", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CLIPICK", CHAN_AUTO, volume: 0.01);
-        S_StartSound("CLIPICK2", CHAN_AUTO, volume: 0.01);
-
-        // Power
-        S_StartSound("MEGAPKUP", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BERSPKUP", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BACKPACK", CHAN_AUTO, volume: 0.01);
-
-        // Ricochet
-        S_StartSound("world/ricochet1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("world/ricochet2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("world/ricochet3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("world/ricochet4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("world/ricochet5", CHAN_AUTO, volume: 0.01);
-        S_StartSound("world/ricochet6", CHAN_AUTO, volume: 0.01);
-        S_StartSound("world/ricochet7", CHAN_AUTO, volume: 0.01);
-
-        S_StartSound("world/blank1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("world/blank2", CHAN_AUTO, volume: 0.01);
-        
-        S_StartSound("BHITDIR1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BHITDIR2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BHITDIR3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BHITDIR4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("BHITDIR5", CHAN_AUTO, volume: 0.01);
-
-        // Explosions
-        S_StartSound("BIGEXPL2", CHAN_AUTO, volume: 0.01);
-
-        S_StartSound("Explode1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Explode2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Explode3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Explode4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Explode5", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Explode6", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Explode7", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Explode8", CHAN_AUTO, volume: 0.01);
-
-        S_StartSound("Barrel/explode", CHAN_AUTO, volume: 0.01);
-        S_StartSound("Barrel/explodeDistant", CHAN_AUTO, volume: 0.01);
-
-        S_StartSound("GLEXP1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("GLEXP2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("GLEXP3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("GLEXP4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("GLEXP5", CHAN_AUTO, volume: 0.01);
-        S_StartSound("GLEXP6", CHAN_AUTO, volume: 0.01);
-
-        S_StartSound("GRENEXP1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("GRENEXP2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("GRENEXP3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("GRENEXP4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("GRENEXP5", CHAN_AUTO, volume: 0.01);
-        S_StartSound("GRENEXP6", CHAN_AUTO, volume: 0.01);
-
-        S_StartSound("dsbarex1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("dsbarex2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("dsbarex3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("dsbarex4", CHAN_AUTO, volume: 0.01);
-        S_StartSound("dsbarex5", CHAN_AUTO, volume: 0.01);
-        S_StartSound("dsbarex6", CHAN_AUTO, volume: 0.01);
-        S_StartSound("dsbarex7", CHAN_AUTO, volume: 0.01);
-
-        S_StartSound("distantexp", CHAN_AUTO, volume: 0.01);
-
-        // Casings + Mags
-        S_StartSound("weapons/casing1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("weapons/casing2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("weapons/casing3", CHAN_AUTO, volume: 0.01);
-
-        S_StartSound("weapons/shell1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("weapons/shell2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("weapons/shell3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("weapons/shell4", CHAN_AUTO, volume: 0.01);
-
-        S_StartSound("weapons/smallmagdrop1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("weapons/smallmagdrop2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("weapons/smallmagdrop3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("weapons/smallmagdrop4", CHAN_AUTO, volume: 0.01);
-
-        S_StartSound("weapons/largemagdrop1", CHAN_AUTO, volume: 0.01);
-        S_StartSound("weapons/largemagdrop2", CHAN_AUTO, volume: 0.01);
-        S_StartSound("weapons/largemagdrop3", CHAN_AUTO, volume: 0.01);
-        S_StartSound("weapons/largemagdrop4", CHAN_AUTO, volume: 0.01);
-    }
+	override void WorldLoaded(worldEvent e)
+	{
+		string BDSounds[] =
+		{
+			//
+			// ------------------------------- SNDINFO.Gore ------------------------------- 
+			//
+			// Gore Decorations
+			"CPTRT01","CPTRT02","CPTRT03","CPTRT04","CPTRT05","CPTRT06","CPTRT07","CPTRT08","CPTRT09","CPTRT10","CPTRT11","CPTRT12","CPTRT13","CPTRT14",
+			"CPTRP1","CPTRP2","CPTRP3","FLEAS","BTHUD1","BTHUD2","BTHUD3","BTHUD4","BTHUD5","BTHUD6","BTHUD7",
+			
+			// Generic Gore
+			"misc/xdeath1a","misc/xdeath1b","misc/xdeath1c","misc/xdeath1d","misc/xdeath1e","misc/xdeath1f","misc/xdeath2a","misc/xdeath2b","misc/xdeath2c","misc/xdeath2d","misc/xdeath2e","misc/xdeath2f",
+			"misc/xdeath3a","misc/xdeath3b","misc/xdeath3c","misc/xdeath4a","misc/xdeath4b","misc/xdeath4c",
+			"BONECR1","BTHUD5","BTHUD6","BTHUD7","LQDRIP1","LQDRIP2","LQDRIP3","LQDRIP4","LQDRIP5","LQDRIP6","LQDRIP7","LQDRIP8","LQDRIP9","LQDRIP10","LQDRIP11","LQDRIP12","LQDRIP13","LQDRIP14",
+			"DSBLUD01","DSBLUD02","DSBLUD03","HEDBON1","HEDBON2","HEDBON3","heartbeat1","heartbeat2",
+			
+			//
+			// ------------------------------- SNDINFO.Terrain ------------------------------- 
+			//
+			"slime","slimesmall","watersmall","burn","burnsmall","blood1","blood2","bloodsmall1","bloodsmall2",
+			"Sparks/Sound1","Sparks/Sound2","Sparks/Sound3","Sparks/Sound4","DSBOTTLE","CHNRTL1","CHNRTL2","CHNRTL3","BDFirePlace","BDFirePlace2","BDALARM","WINBREA",
+			"AMBRAIN","AMBAIRP","ICEBRK1","ICEBRK2","BDWFALL1","BDWFALL2","BDWFALL3","ACIDMELT",
+			"bigspl1","dssplas2","water1","water2","water3","water4",
+			"world/watersplashsmall","world/sludgegloop","world/sludgegloopsmall","world/lavasizzle","world/lavsiz2","world/lavasizzlesmall","world/drip","world/hotsiz",
+
+			//
+			// ------------------------------- SNDINFO.Monsters ------------------------------- 
+			//
+			// Footsteps
+			"fatso/active","pain/active","ZomStep1","ZomStep2","ZomStep3","ZomStep4","ImpStep1","ImpStep2","ImpStep3","ImpStep4","FatStep1","FatStep2","FatStep3","FatStep4",
+			"PinkySt1","PinkySt2","PinkySt3","PinkySt4","RevStep1","RevStep2","RevStep3","RevStep4","BruStep1","BruStep2","BruStep3","BruStep4",
+
+			// Normal Monsters
+			// Zombieman + Shotgunguy + Chaingunguy
+			"DSPOPAI1","DSPOPAI2","DSPOPAI3","DSPOPAI4","ZCSIT1","ZCSIT2","ZCSIT3","ZCSIT4","ZCSIT5","BURNZOM1","BURNZOM2","BURNZOM3",
+
+			// IMP
+			"IMPCHARG","imp/melee1","imp/melee2","imp/melee3","IMPMISS1","IMPMISS2","IMPMISS3","ImpStep1","ImpStep2","ImpStep3","ImpStep4","ImpBall4","ImpBall5","ImpBall6","ImpBall1",
+
+			// Pinky Demon
+			"PINKIDL1","PINKIDL2","PINKIDL3","PINKIDL4","DSBIGDPN",
+
+		    // Cacodemon
+			"caco/pain","caco/active","CacoBal4","CacoBal5","CacoBal6","CacoBal1","CacoBal2","CacoBal3",
+
+			// Lost Soul
+			"skull/pain","skull/active","LSOD1","LSOD2","LSOD3","LSOD4",
+
+			// Baron of Hell + Hell Knight
+			"baron/active","knight/active","PSXDPN","bigstep1","bigstep2","bigstep3","bigstep4","BaroBal4","BaroBal5","BaroBal6","BaroBal1","BaroBal2","BaroBal3",
+
+			// Revenant
+			"REVIDLE1","REVIDLE2","REVIDLE3","REVIDLE4","REVIDLE5","REVIDLE6","REVIDLE7","REVOUCH1","REVOUCH2","REVOUCH3","Skeleton/explode",
+
+			// Arachnotron sounds
+			"SPIPAIN1","SPIPAIN2",
+
+			// Cyberdemon sounds
+			"CLAP","CYBPAIN","CYBTAT","DSCANFIR","cyber/active",
+
+			// Mastermind sounds
+			"Mastermind/minigun",
+
+			// Custom Monsters
+			// Icon of Sin sounds
+			"ICOSCRE","ICOBREAT","ICOTHUND","ICOFIRE","ICOLAUG",
+
+			// Volcabus sounds
+			"Volcabus/Sight","Volcabus/Pain","Volcabus/Death","Volcabus/Attack","VOLCCF1","VOLCCF2","VOLCCF3","VOLCCF4","VOLCBRN",
+
+			// Arachnotron 2 gun sounds
+			"PAILGF3","PAILGF2","PAILGD3",
+
+			// Mummy sounds
+			"MUMYACT","MUMYSEE","MUMYDIE",
+
+			// Mother Demon sounds
+			"mother/sight","mother/pain","mother/death","mother/attack","mother/active",
+
+			// Rat sounds
+			"rat/melee","rat/pain","rat/death1","rat/death2","rat/death3",
+
+			// Zombie Marine sounds
+			"zombiemarine/sight1","zombiemarine/sight2","zombiemarine/sight3","zombiemarine/sight4","zombiemarine/sight5","zombiemarine/sight6","zombiemarine/sight7",
+			"zombiemarine/sight8","zombiemarine/sight9","zombiemarine/sight10","zombiemarine/sight11","zombiemarine/death1","zombiemarine/death2","zombiemarine/death3",
+			"zombiemarine/death4","zombiemarine/death5","zombiemarine/death6","zombiemarine/death7","zombiemarine/pain1","zombiemarine/pain2","zombiemarine/pain3","zombiemarine/pain4",
+			"zombiemarine/pain5","zombiemarine/pain6","zombiemarine/pain7","zombiemarine/pain8","zombiemarine/pain9","zombiemarine/pain10","zombiemarine/pain11","zombiemarine/active1",
+			"zombiemarine/active2","zombiemarine/active3","zombiemarine/active4","zombiemarine/active5",
+
+			// Juggernaut sounds
+			"juggernaut/see","juggernaut/roam","juggernaut/engine","juggernaut/death","BTKPAIN1","BTKPAIN2","BTKPAIN3",
+
+			// Nazi sounds
+			"nazisight1","nazisight2","nazisight3","nazisight4","nazisight5","nazisight6","nazisight7","nazisight8","nazideath1","nazideath2","nazideath3","nazideath4","nazideath5","nazideath6",
+			"nazideath7","nazideath8","nazideath9","nazideath10","nazideath11","nazipain1","nazipain2","nazipain3","nazipain4","nazipain5","nazipain6","nazipain7","nazipain8",
+
+			// Evil Marines sounds
+			"EVMRSIT1","EVMRSIT2","EVMRSIT3","EVMRSIT4","EVMRSIT5","EVMRSIT6","EVMRACT1","EVMRACT2","EVMRACT3","EVMRACT4","EVMRPN1","EVMRPN2","EVMRDT1","EVMRDT2","EVMRLAUG",
+
+			// WAD Compatibility Monsters
+			// Ancient Aliens sounds
+			"alieno/pain","alieno/death","alieno/sight","Alieno/Attivo","AlienGuard/See","AlienGuardian/Loop","AlienGuard/Death",
+
+			// Wolfenstein Nazis sounds
+			"SS/pain","BWZIDTH1","BWZIDTH2","BWZISIT1","BWZISIT2","ssscr1","ssscre2","ssscre3",
+
+			// Eviternity sounds
+			"NDemon/sight","Ndemon/pain","Ndemon/death","Ndemon/Active","Ndemon/Attack","BRobot/sight","BRobot/death","CacoAssholeSee","CacoAssholepain",
+			"CacoAssholedeath","CacoAssholeAttack","Scheletro/Morte","Angel/sight","angel/pain","angel/cube","angel/death","Angel/attack","FCAL1","FCAL2","FCAL3","FCAL4","Commander/Idle",
+
+			// 2048 Unleashed sounds
+			"Heart/Pain","AlphaSoul/Sight","AlphaSoul/Pain","AlphaSoul/Death","Witch/Sight","Witch/Spit","Witch/Pain","Witch/Death","Witch/Cubeboom","DopeFish/Pain",
+
+			// Eviternity sounds
+			// Archangelus sounds
+			"Archangel/sight","Archangel/pain","Archangel/death","Archangel/spit","Archangel/cube","Archangel/cubeboom","Bat/Sight",
+
+			//
+			// ------------------------------- SNDINFO.BD ------------------------------- 
+			//
+			// Misc (idk where to put them too)
+			"misc/keytry","DSTELEPT","weapons/barrelpain","misc/k_pkup","Pickup/HeavyArmor","Pickup/RadSuit","Pickup/Invis","CrushSkull","ads/in","ads/out","weapons/lowammo","RevLaunch/Draw",
+
+			// Slot 1 sounds
+			// Chainsaw sounds
+			"Chainsaw/Zip","Chainsaw/Draw","Chainsaw/Start","Chainsaw/Loop","Chainsaw/Stop","Chainsaw/Idle","Chainsaw/Cut",
+
+			// Chainsaw attack sounds
+			"DSSAWAL1","DSSAWAL2","DSSAWAL3","DSSAWAL4",
+
+			// Chainsaw sounds
+			"DSSAW1","DSSAW2","DSSAW3","DSSAW4","DSSAW5","DSSAW6","DSSAW7","DSSAW8","DSSAW9","DSSAW0",
+
+			// Axe sounds
+			"Axe/Wall","Axe/Hit","Axe/Draw","Axe/Woosh1","Axe/Woosh2","Axe/Swing","Axe/AltSwing","Axe/Throw",
+
+			// Slot 2 sounds
+			// Pistol sounds
+			"Pistol/Reload1","Pistol/Reload2","Pistol/Draw","Pistol/slide","Pistol/slide2","Pistol/Fire","DSPISTOL",
+
+			// SMG sounds
+			"SMG/Fire","SMG/Reload1","SMG/Reload2",
+
+			// Revolver sounds
+			"Revolver/Fire","Revolver/Fire2","Revolver/Hammer","Revolver/Open","Revolver/Close","Revolver/Unload","Revolver/Reload1",
+
+			// MP40 sounds
+			"MP40/Reload1","MP40/Reload2","MP40/Fire","MP40/Draw","MP40/Bolt1","MP40/Bolt2","MG42/Draw",
+
+			// Slot 3 sounds
+			// Shotgun sounds
+			"Shotgun/Fire","Shotgun/Pump","Shotgun/Pump1","Shotgun/Pump2","SHTLOAD1","SHTLOAD2","SHTLOAD3","SHTLOAD4",
+
+			// Super Shotgun sounds
+			"SSG/Draw","SSG/Fire","SSG/AltFire","SSG/Lever1","SSG/Lever2",
+
+			// Assault Shotgun sounds
+			"ASG/Fire","ASG/Draw","ASG/Reload1","ASG/Reload2","asg/bolt1","asg/bolt2","asg/bolt3",
+
+			// Slot 4
+			// Rifle
+			"Rifle/Fire","Rifle/Select","Rifle/Bolt1","Rifle/Bolt2","Rifle/Reload1","Rifle/Reload2","Rifle/ReloadGrenade","Rifle/Grenade1","Rifle/Grenade2",
+
+			// Chaingun
+			"Chaingun/Start","Chaingun/Spin","Chaingun/Stop","Chaingun/Fire","Chaingun/belt","Chaingun/beltQuiet",
+
+			// Sniper Rifle
+			"Sniper/Fire","FARM14","Sniper/Reload1","Sniper/Reload2","Sniper/Draw",
+
+			// Slot 5
+			// Rocket Launcher
+			"Rocket/Fire","Rocket/Draw","Rocket/Fly","rocket/reload1","rocket/reload2","Rocket/Loop",
+
+			// Grenade Launcher
+			"Weapons/GrenadeFire","GrenadeLauncher/Fire","GLGRBNC1","GLGRBNC2","GLGRBNC3","GrenadeLauncher/Open","GrenadeLauncher/Load","GrenadeLauncher/Close","HGRENB1A","HGRENB2A",
+
+			// Devastator
+			"Devastator/fire","Devastator/select","Devastator/explode","Incendiary/Fire",
+
+			// Slot 6
+			// Plasma Rifle
+			"Plasma/Charge","Plasma/AltFire","Plasma/FullyCharged","Plasma/Draw","Plasma/Cool","Plasma/Fire","Plasma/Reload1","Plasma/Reload2","Plasma/BeepLow","Plasma/BeepQuiet","Plasma/Pickup","Plasma/Beep","Plasma/BeepBeep","PLASHIT1","PLASHIT2","PLASHIT3","PLASHIT4","PLASHIT5",
+			
+			// Railgun
+			"Railgun/Fire","Railgun/Recharge","Railgun/Reload1","Railgun/Reload2",
+
+			// Slot 7
+			// BFG 9k
+			"BFG/Draw","BFG/Charge","BFG/Fire","BFG/Explosion","BFG/ExplosionDistant",
+
+			// BFG 10k
+			"BFG10K/Idle","BFG10K/Charge","BFG10K/Fire","BFG10K/Stop",
+
+			// Unmaker
+			"Unmaker/Start","Unmaker/Loop","Unmaker/Stop",
+
+			// Misc
+			"SLOWON","SLOWOFF","FLASHON","FLASHOFF","INFRARED",
+
+			// Flamethrower
+			"FLAMER","FLAMSTOP","BREATHOF","Flamer/Select","Flamer/idle","Flamer/loop","Flamer/stop",
+
+			"BRKCLANG","B2KCLANG",
+
+			// Grenades
+			"Grenade/Pin","Grenade/Bounce","Grenade/Toss","Grenade/Pickup",
+
+			// Nuke
+			"Nuke/Explosion",
+
+			// Generic Sounds
+			"Weapon/Empty","RELOAD","RELO1","RELO2",
+
+			// Distant Sounds
+			// Rifle
+			"FARRIF",
+
+			// Heavy Machinegun
+			"FARHMG",
+
+			// Pistol or Shotgun
+			"FARSHT",
+
+			// Light Machinegun
+			"FARMGN",
+
+			// Autocannon
+			"FARCAN1",
+
+			// SuperShotgun or Sniper Rifle
+			"FARSSG",
+
+			// Heavy Artillery
+			"MINIGN1","MINIGN3","MINIGN4","HMGFIRE",
+
+			// Items
+			// Heals
+			"ARMOR","GOTHPB","GOTHPS",
+
+			// Ammo
+			"CBOXPKUP","CHGNPKUP","SHELPKUP","SHELPK1","SHELPK2","RCKCLIP","RCKCLIP2","CBOXPICK","CLIPICK","CLIPICK2",
+
+			// Power
+			"MEGAPKUP","BERSPKUP","BACKPACK",
+
+			// Ricochet
+			"world/ricochet1","world/ricochet2","world/ricochet3","world/ricochet4","world/ricochet5","world/ricochet6","world/ricochet7",
+			"world/blank1","world/blank2",
+			"BHITDIR1","BHITDIR2","BHITDIR3","BHITDIR4","BHITDIR5",
+
+			// Explosions
+			"BIGEXPL2",
+			"Explode1","Explode2","Explode3","Explode4","Explode5","Explode6","Explode7","Explode8",
+			"Barrel/explode","Barrel/explodeDistant",
+			"GLEXP1","GLEXP2","GLEXP3","GLEXP4","GLEXP5","GLEXP6",
+			"GRENEXP1","GRENEXP2","GRENEXP3","GRENEXP4","GRENEXP5","GRENEXP6",
+			"dsbarex1","dsbarex2","dsbarex3","dsbarex4","dsbarex5","dsbarex6","dsbarex7",
+			"distantexp",
+
+			// Casings + Mags
+			"weapons/casing1","weapons/casing2","weapons/casing3",
+			"weapons/shell1","weapons/shell2","weapons/shell3","weapons/shell4",
+			"weapons/smallmagdrop1","weapons/smallmagdrop2","weapons/smallmagdrop3","weapons/smallmagdrop4",
+			"weapons/largemagdrop1","weapons/largemagdrop2","weapons/largemagdrop3","weapons/largemagdrop4",
+
+			//
+			// ------------------------------- SNDINFO.Vehicles ------------------------------- 
+			//
+			// Vehicles
+			"BIKE1","BIKE1A","BIKE1B","BIKE1C","BIKE1D","BIKE1E","BIKE1F","BIKE1G","BIKESK","BIKESK1","BIKESK2","BIKESK3","BIKECLW","EBIKECLS","EBIKEBNC","DSXDTH2E","BIKESTRT","CARSTE","REPAIR",
+			"TNKENGS","DSMISFIR",
+			"MISFAR",
+			"DSMISLAU",
+			"HELILOP","HELILOP2","HELSTAR","HELSTOP",
+			"MECHWLK","MECHJUMP",
+			"ACANO1",
+			"ACANO2",
+			"TANK1","TANK2","TANK3","TANKRE","MISLFIRE",
+			"TANKF1","TANKF2","TANKF3",
+			"TANKMG",
+			"BIKECLW","EBIKECLS",
+			"RICMET1","RICMET2","RICMET3","RICMET4"
+		};
+
+		for (int i = 0; i < BDSounds.Size(); i++)
+		{
+			S_StartSound(BDSounds[i], CHAN_AUTO, volume: 0.01);
+		}
+	}
 }
